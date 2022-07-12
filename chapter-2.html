@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Geometry of Vision</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Unica+One|Rubik|Muli|Prompt|Vollkorn&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+  <script src="./libraries/katex.min.js"></script>
+  <script src="./libraries/p5.min.js"></script>
+  <script src="./libraries/marked.min.js"></script>
+  <script src="./libraries/vue.js"></script>
+  <script src="./libraries/vue-observe-visibility.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="description" content="Interactive Sandbox" />
+
+</head>
+<body>
+
+
+<div id="root" class="container">
+
+<md>
+# The Geometry of Vision
+
+<div class="flex-container">
+ <img src="./images/banner-chapter-2.jpg" class="shrinkToFit" width="100%" style="border:3px solid #25343E; border-radius: 15px;">
+</div>
+
+<hr>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/OFADTURH-yw"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<hr>
+
+## Lecture 4: The Extended Euclidean Plane
+</md>
+
+<md>
+## Lecture 5: Three Coincidences of Projective Geometry
+</md>
+
+<md>
+## Lecture 6: Extending Space to Prove Desargues's Theorem
+</md>
+
+
+<div class="nav-container" style="width: 100%;">
+ <a href="./chapter-1.html" class="nav-button"><< Chapter One</a>
+ <a href="./index.html" class="nav-button">Home</a>
+ <a href="./chapter-3.html" class="nav-button" >Chapter Three >></a>
+</div>
+
+
+
+</div>
+
+<!-- here we define data accessible throughout the page -->
+<script>
+let data = {
+
+  aside1: {
+    expand: false
+  },
+};
+</script>
+<!-- vue-definitions.js runs vue.js and defines the components -->
+<script src="vue-definitions.js"></script>
+
+</body>
+</html>
