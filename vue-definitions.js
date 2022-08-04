@@ -121,12 +121,12 @@ Vue.component('mcq-pictorial', {
   <div :class="['exercise-box', palette]">
     <h4>{{label}}</h4>
     <h5>{{question}}</h5>
-    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="90%"/>
+    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="95%"/>
     <br>
 
     <div class="flex-container">
     <figure v-for="(choice, index) in choices">
-    <img :src="choice.picture" :class="['solution-image', 'shrinkToFit']" width=200>
+    <img :src="choice.picture" :class="['solution-image', 'shrinkToFit']" width=200px>
     <figcaption :class="['answer', (choice.correct && selected == index) ? 'bold' : '']">
     <input type="radio" v-model="selected" :value="index">{{choice.answer}}
     </figcaption>
