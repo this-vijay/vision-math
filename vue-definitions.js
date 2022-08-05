@@ -82,6 +82,33 @@ Vue.component('md', {
 
 });
 
+
+// drawing challenge component
+
+
+Vue.component('challenge', {
+
+  props: ['label', 'palette', 'image', 'instruction','worksheet', 'padlet'],
+
+  template: `
+  <div :class="['exercise-box', palette]">
+    <h4>{{label}}</h4>
+    <a :href="worksheet"><img :src="image" class="exercise-image shrinkToFit" width="50%"/></a>
+    <a :href="padlet"><h5>{{instruction}}</h5></a>
+    <br>
+  </div>
+  `,
+
+
+  data: function() {
+    return {
+      selected: NaN
+    }
+  }
+
+})
+
+
 // multiple choice question component
 
 
@@ -92,8 +119,8 @@ Vue.component('mcq', {
   template: `
   <div :class="['exercise-box', palette]">
     <h4>{{label}}</h4>
+        <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="50%"/>
     <h5>{{question}}</h5>
-    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="90%"/>
     <br>
     <p v-for="(choice, index) in choices" :class="(choice.correct && selected == index) ? 'bold' : ''"><input type="radio" v-model="selected" :value="index">{{choice.answer}}</p>
     <p v-for="(choice, index) in choices" v-if="index == selected" :class="choice.correct ? 'true' : 'false'">{{choice.response}}</p>
@@ -120,8 +147,8 @@ Vue.component('mcq-pictorial', {
   template: `
   <div :class="['exercise-box', palette]">
     <h4>{{label}}</h4>
+    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="50%"/>
     <h5>{{question}}</h5>
-    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="95%"/>
     <br>
 
     <div class="flex-container">
