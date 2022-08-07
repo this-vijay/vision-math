@@ -31,11 +31,7 @@ figure {
   display: table;
 }
 
-.chapter-link {
-  border:3px solid #2e2e27; 
-  border-radius: 25px;
-  background-color: #424563;
-}
+
 
 .nav-button{
   border-radius: 15px;   
@@ -43,7 +39,25 @@ figure {
   font-weight: 800; 
   color: #293A4E; 
   background-color: #E1DED2; 
-  box-shadow: 3px 5px rgba(0, 0, 0, 0.5);  
+  box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+  text-decoration: none;  
+}
+
+.nav-button:hover {
+  background-color: #536E8D;
+  color: #E1DED2;
+  transition: 0.2s
+}
+
+.chapter-link img{
+  border:3px solid #25343E; 
+  border-radius: 15px;
+}
+
+.chapter-link:hover img{
+    -webkit-filter: invert(100%); 
+    filter: invert(100%);
+    transition: 0.2s
 }
 
 figcaption {
@@ -189,12 +203,20 @@ aside {
 
 h2 {
   font-family: 'Unica One', sans-serif;
-  font-weight:700;
-  font-size: 1.8rem;
+  font-weight:500;
+  font-size: 1.6rem;
   text-transform: uppercase;
   text-align: center;
   color: #FFC222;
   margin: 20px 10px 30px;
+}
+
+h2 a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E1DED2;
 }
 
 h3 {
@@ -306,6 +328,7 @@ p {
   }
   h2 {
     font-size:  1.2rem;
+    margin: 10px 5px 0px;
   }
   h5 {
     font-size:  1rem;
@@ -329,7 +352,7 @@ p {
   .exercise-image{
     padding: 0px;
     margin: 10px 5px 5px;
-
+    min-width: 280px;
   }
   figure{
     margin:  0px 0px 0px;
