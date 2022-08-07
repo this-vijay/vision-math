@@ -41,6 +41,7 @@ figure {
   background-color: #E1DED2; 
   box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
   text-decoration: none;  
+  transition: 0.2s
 }
 
 .nav-button:hover {
@@ -52,6 +53,7 @@ figure {
 .chapter-link img{
   border:3px solid #25343E; 
   border-radius: 15px;
+  transition: 0.2s
 }
 
 .chapter-link:hover img{
