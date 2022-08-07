@@ -231,17 +231,14 @@ h3 {
 
 h4 {
   font-family: 'Unica One', sans-serif;
-  font-weight:700;
+  font-weight:800;
   font-size: 1.8rem;
   text-transform: uppercase;
   float: left;
   color: black;
-  margin: 20px 20px 30px;
-  background-color: #E1DED2;
+  margin: 0px 20px 0px;
   border-radius: 15px;
-  padding: 10px;
   display:  inline-block;
-  box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 h5 {
@@ -340,8 +337,7 @@ p {
   }
   h4 {
     font-size: 1.2rem;
-    padding: 10px;
-    margin: 5px 5px 5px;
+    margin: 0px 5px 0px;
   }
   .exercise-box {
     padding: 15px;  
