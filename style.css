@@ -128,6 +128,7 @@ aside {
   background-color: #E1DED2; 
   border-radius: 15px;   
   box-shadow: 3px 5px rgba(0, 0, 0, 0.5);
+  min-width: 280px;
 }
 
 .solution-image{
@@ -354,7 +355,6 @@ p {
   .exercise-image{
     padding: 0px;
     margin: 10px 5px 5px;
-    min-width: 280px;
   }
   figure{
     margin:  0px 0px 0px;
