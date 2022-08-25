@@ -34,6 +34,253 @@
 
 </md>
 
+<p>
+As we've stated it, Desargues's Theorem concerns triangles in the two dimensional extended plane P².  However, there is also a more general version of Desargues's Theorem, which concerns triangles living in a three dimensional space.  Surprisingly, this 3D version is easier to prove than the 2D version!
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/M45FaP1JqGA"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq-pictorial label="Exercise 1" palette="past" :images="[`./images-chapter-2/chapter-two-ideal-lines.jpg`]" question="This cube is oriented in three point perspective, and has faces lying in planes π , π' , and π''. Which white line represents the  line at infinity corresponding to plane π' ?" :choices="[
+    {
+      correct: true,
+      answer: `A`,
+      picture: `./images-chapter-2/chapter-two-ideal-lines-A.jpg`, 
+      response: `Yes!  The white line connects the two vanishing points we reach by following edges of the π' face of the cube.`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-2/chapter-two-ideal-lines-B.jpg`, 
+      response: `No. The white line is missing an important vanishing point.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-2/chapter-two-ideal-lines-C.jpg`, 
+      response: `No. The white line is missing an important vanishing point.`
+    },
+    {
+      correct: false,
+      answer: `D`,
+      picture: `./images-chapter-2/chapter-two-ideal-lines-D.jpg`, 
+      response: `No. The white line is missing an important vanishing point.`
+    }
+  ]">
+</mcq-pictorial>
+
+<mcq label="Exercise 2" palette="past" :images="[]" question="Given two distinct parallel planes in R³, their intersection in P³ will be" :choices="[
+    {
+      correct: false,
+      answer: `a point in P³.`,
+      response: `No, that's too small!  Any point at infinity incident with one of the planes will also be incident with the other plane.`
+    },
+    {
+      correct: true,
+      answer: `a line in P³.`,
+      response: `Correct, the same line at infinity will be associated to both planes.`
+    },
+    {
+      correct: false,
+      answer: `a plane in P³.`,
+      response: `No, that's too big!  Remember, the planes are distinct!`
+    },
+    {
+      correct: false,
+      answer: `empty.`,
+      response: `In R³ the intersection would indeed by empty.  But perhaps in P³ the planes will share some points at infinity?`
+    }
+  ]">
+</mcq>
+
+
+<p>
+Now that we've defined the extended Euclidean space P³, let's state the 3D version of Desargues's Theorem.
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/P03abCc1kXo"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 3" palette="past" :images="[]" question="Let {A, B, C} and {a, b, c} be two sets of non-collinear points in P³.
+According to Desargues's theorem, if lines Aa, Bb, and Cc are concurrent,
+then" :choices="[
+    {
+      correct: true,
+      answer: `the points AB ∩ ab, AC ∩ ac, and BC ∩ bc are collinear.`,
+      response: `Yes!  If the triangles are in perspective from a point, they must also be in perspective from a line.`
+    },
+    {
+      correct: false,
+      answer: `the lines AB, AC, and BC are concurrent.`,
+      response: `No.  That's not possible since A, B, and C form a triangle.`
+    },
+    {
+      correct: false,
+      answer: `the lines ab, ac, and bc are concurrent.`,
+      response: `No.  That's not possible since a, b, and c form a triangle.`
+    },
+    {
+      correct: false,
+      answer: `the points AB ∩ AC, AB ∩ BC, and AB ∩ ab are collinear.`,
+      response: `No, that is unlikely to happen, and not the conclusion of Desargues's Theorem.`
+    }
+  ]">
+</mcq>
+
+<p>
+Let's return to the shadow drawing challenge from the introduction video for Chapter Two.  It will provide a key insight for proving Desargues's Theorem!
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/T91zEv5ZgKA"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<challenge label="Challenge 4" palette="past" image="./images-chapter-2/worksheet3-thumb.jpg" instruction="Draw the shadow of the triangle as it would actually appear, using only a straightedge.  Then click HERE to upload an image of your drawing to Padlet!" worksheet="./worksheets/perspective-worksheet3.pdf" padlet="https://padlet.com/vijayravikumar/peqci4geagtuq86h">
+</challenge>
+
+
+<p>Upload your drawing to padlet by clicking the text box above!  And then proceed to the next video, where we'll see one possible solution.</p>
+
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/CEgFVwP9u6U"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[`./images-chapter-2/chapter-two-construction-fail.jpg`]" question="The construction of the shadow requires that we assume the base drawing represents" :choices="[
+    {
+      correct: false,
+      answer: `a lamp post and a sign board edge that are both vertical.`,
+      response: `While this assumption will ensure the construction works, it is stronger than necessary.`
+    },
+    {
+      correct: true,
+      answer: `a lamp post and a sign board edge that are coplanar.`,
+      response: `Yes!  We need them to be coplanar in space to ensure the light ray hitting the top left corner of the sign intersects the line connecting the base of the lamp post to the bottom left corner of the sign.`
+    },
+    {
+      correct: false,
+      answer: `a lamp post and a sign board edge that are parallel to each other.`,
+      response: `While this assumption will ensure the construction works, it is stronger than necessary.`
+    },
+    {
+      correct: false,
+      answer: `any lamp post and any sign board, with no particular relation to each other.`,
+      response: `No, the construction will not work if the lamp post and the sign board edge are skew, for example.  Can you see where it would fail?`
+    }
+  ]">
+</mcq>
+
+<p>
+Let's see how the drawing challenge relates to Desargue's Theorem.
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/nHpsMOqQe9I"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-2/chapter-two-coplanar.jpg`]" question="If the triangles are coplanar, then where does the argument in our proof break down?" :choices="[
+    {
+      correct: true,
+      answer: `The axis of perspectivity is no longer equal to the intersection of
+the planes containing the two triangles.`,
+      response: `Correct!  The planes no longer intersect in a line, but rather an entire plane!  So we no longer have such a nice physical interpretation of the axis.`
+    },
+    {
+      correct: false,
+      answer: `The triangles are no longer in perspective from a line.`,
+      response: `Actually, Desargues's Theorem still holds for coplanar triangles!`
+    },
+    {
+      correct: false,
+      answer: `The lines Aa, Bb, and Cc cannot be concurrent.`,
+      response: `They can indeed by concurrent.  Just see the above image!`
+    },
+    {
+      correct: false,
+      answer: `The triangles will now be in perspective from any line in their shared plane.`,
+      response: `No, they will still be in perspective from the specific line containing points AB ∩ ab, AC ∩ ac, and BC ∩ bc.`
+    }
+  ]">
+</mcq>
+
+<p>
+We've proved Desargues's Theorem for non-coplanar triangles in P³.  But what about triangles in P³ that lie on a common plane?
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/-FTjW1L0xNg"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 6" palette="past" :images="[`./images-chapter-2/chapter-two-lift.jpg`]" question="In our lifting, we chose C' to be any point on PC.  And then we let c' be Pc ∩ OC'.  How can we be sure this intersection exists?" :choices="[
+    {
+      correct: false,
+      answer: `The line OC' is guaranteed to intersect the line Pc because we chose the point P to ensure this outcome.`,
+      response: `Actually, P was freely chosen lying off the ground plane!`
+    },
+    {
+      correct: false,
+      answer: `The line OC' is guaranteed to intersect the line Pc because any two lines in P³ will meet somewhere.`,
+      response: `Two lines in P³ may be skew, in which case they will not meet.`
+    },
+    {
+      correct: true,
+      answer: `The line OC' is guaranteed to intersect the line Pc because they are coplanar -- both lying in the plane determined by OC and P.`,
+      response: `Yes!  Any two lines in an extended plane are guaranteed to meet.`
+    }
+  ]">
+</mcq>
+
+<p>
+We still need to prove the converse to Desargue's Theorem: if two triangles are in perspective from a line, then they must be in perspective from a point.  We'll leave this proof as an exercise, but the following video provides some hints.
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/tTJGcBMbemE"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
 
 
 <div class="nav-container" style="width: 100%;">

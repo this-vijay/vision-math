@@ -34,8 +34,163 @@
 
 </md>
 
+<p>
+Are there any interesting results in this geometry of points and lines?
+</p>
 
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/2wrr6QTcaTc"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
 
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-2/chapter2-harmonic1.jpg`]" question="Interchanging points P and Q would have what effect on point D?" :choices="[
+    {
+      correct: false,
+      answer: `D would appear to the left of A.`,
+      response: `No.  Go through the construction of the point D and double check your answer.`
+    },
+    {
+      correct: false,
+      answer: `D would appear between A and B.`,
+      response: `No.  Go through the construction of the point D and double check your answer.`
+    },
+    {
+      correct: false,
+      answer: `D would appear between B and C.`,
+      response: `No.  Go through the construction of the point D and double check your answer.`
+    },
+    {
+      correct: true,
+      answer: `D would remain in the same position.`,
+      response: `Correct!  The position of D will remain the same for any choices of P and Q which are collinear with B.  So in particular, you can interchange P and Q without altering the position of D.`
+    }
+  ]">
+</mcq>
+
+<p>
+In order to construct the harmonic conjugate, we freely chose points P and Q.
+Can we prove that the harmonic conjugate is truly independent of our choices?
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/ZVjW_An7FGk"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-2/chapter2-evenly-spaced.jpg`]" question="What is the harmonic conjugate of B with respect to A and C if A, B, and C are evenly spaced on the real line?" :choices="[
+    {
+      correct: false,
+      answer: `0`,
+      response: `No. Look at the picture carefully.  Where does the diagonal RS meet the real line?`
+    },
+    {
+      correct: false,
+      answer: `1`,
+      response: `No. Look at the picture carefully.  Where does the diagonal RS meet the real line?`
+    },
+    {
+      correct: true,
+      answer: `∞`,
+      response: `Yes, the diagonal RS is parallel to the real line, so they meet at ∞.`
+    },
+    {
+      correct: false,
+      answer: `We need more information to say.`,
+      response: `Actually we have enough information!  Where does the diagonal RS meet the real line?`
+    }
+  ]">
+</mcq>
+
+<p>
+Let's take a closer look at a second co-incidence, known as Pappus's Theorem!
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/qVoaU8kJc1o"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 3" palette="past" :images="[`./images-chapter-2/chapter-two-pappus-case.jpg`]" question="What is the conclusion of Pappus's Theorem when just X lies at infinity, but Y and Z do not, as pictured here? " :choices="[
+    {
+      correct: false,
+      answer: `A, B, or C must lie at infinity in this case.`,
+      response: `No. Look at the picture carefully.`
+    },
+    {
+      correct: false,
+      answer: `The line XY or and the line XZ must be parallel.`,
+      response: `Hang on...Pappus's Theorem says X, Y, and Z must be collinear.  But what would that look like if X is at infinity?`
+    },
+    {
+      correct: true,
+      answer: `The line YZ is parallel to both Ab and Ba.`,
+      response: `Correct!  Since both Ab and Ba meet the point at infinity X, they must be parallel to each other.  And since X, Y, and Z are collinear, the line YZ will also be in that parallel family.`
+    },
+    {
+      correct: false,
+      answer: `This cannot happen.  One of the sets {A, B, C} or {a, b, c} must not be collinear.`,
+      response: `In fact it can happen.  Look at the picture more carefully.`
+    }
+  ]">
+</mcq>
+
+<p>
+And last but not least, let's examine Desargues's Theorem more closely!
+</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/zV15fODVOFg"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq-pictorial label="Exercise 4" palette="past" :images="[`./images-chapter-2/chapter-two-desargues-case.jpg`]" question="Which image represents a triangle abc such that abc and ABC are in perspective from the point O.
+" :choices="[
+    {
+      correct: false,
+      answer: `A`,
+      picture: `./images-chapter-2/homework2-desargues-optionA.jpg`, 
+      response: `No.  The point at infinity c is equal to the point at infinity C.  However, Oa does not meet A, and Ob does not meet B.`
+    },
+    {
+      correct: true,
+      answer: `B`,
+      picture: `./images-chapter-2/homework2-desargues-optionB.jpg`, 
+      response: `Correct!  The point c lies directly above O, so Oc meets the point at infinity C. And by inspection, Oa meets A and Ob meets B.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-2/homework2-desargues-optionC.jpg`, 
+      response: `No. By inspection, Oa meets A and Ob meets B. But Oc does not meet C.`
+    },
+    {
+      correct: false,
+      answer: `D`,
+      picture: `./images-chapter-2/homework2-desargues-optionD.jpg`, 
+      response: `No. The point c lies directly below O, so Oc will meet the point at infinity C.  However, Oa and Ob do not meet A and B.`
+    }
+  ]">
+</mcq-pictorial>
 
 <div class="nav-container" style="width: 100%;">
  <a href="./lecture-4.html" class="nav-button"><< Lecture 4 </a>
