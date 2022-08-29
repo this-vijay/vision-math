@@ -34,7 +34,202 @@
 
 </md>
 
+<p>Perspectivities seem quite useful, but are they really the perspective-shifting maps we've been looking for?</p>
 
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/GGZmPc0Si50"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-3/chapter-3-motivation.jpg`]"  question="There exists a perspectivity from π to π' which maps the railway tracks on π to the railway tracks on π'." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Actually, these images cannot be related by a single perpectivity, since pairs of lines we'd need to relate are skew lines in space.`
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Correct.  We'll need a sequence of at least two perspectivities (i.e. a projectivity) to relate these images.`
+    }
+  ]">
+</mcq>
+
+<p>Let's look at some examples of one dimensional projectivities -- that is, projectivities between (extended) lines in P³.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/AoAitKGUjL4"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-3/chapter-3-easy-puzzle.jpg`]"  question="Let ℒ and ℓ be any two distinct lines in P³.  Let A and B be any two points on ℒ, and a and b any two points on ℓ. What’s the minimum number of perspectivities that we can compose to create a projectivity that is guaranteed to take A to a and B to b?
+" :choices="[
+    {
+      correct: false,
+      answer: `1`,
+      response: `If lines ℒ and ℓ happen to be coplanar, then a single perspectivity will indeed suffice. But they may not be coplanar!`
+    },
+    {
+      correct: true,
+      answer: `2`,
+      response: `Correct.  No matter how the lines are situated in space, we can construct this projectivity as a sequence of two perspectivities.`
+    },
+    {
+      correct: false,
+      answer: `3`,
+      response: `While you can construct a sequence of three perspectivities that will take A to a and B to b, you can actually do it in fewer!`
+    },
+    {
+      correct: false,
+      answer: `It may not be possible at all!`,
+      response: `Actually, no matter how the lines and points are situated in space, we can construct a finite sequence of perspectivities that will take A to a and B to b.`
+    }
+  ]">
+</mcq>
+
+<p>That example was rather simple.  Can imagine a slightly more complicated scenario?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/WhMIBjfES1g"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 3" palette="past" :images="[`./images-chapter-3/chapter-3-harder-puzzle.jpg`]"  question="Let ℒ and ℓ be any two distinct lines in P³.  Let A, B, and C be any three points on ℒ, and a, b, and c any two points on ℓ. What’s the minimum number of perspectivities that we can compose to create a projectivity that is guaranteed to take A to a, and B to b, and C to c?
+" :choices="[
+    {
+      correct: false,
+      answer: `1`,
+      response: `Only in very special cirumstances will a single perspectivity suffice!  For the general scenario, you will need more.`
+    },
+    {
+      correct: true,
+      answer: `2`,
+      response: `Correct.  No matter how the lines are situated in space, we can construct this projectivity as a sequence of just two perspectivities.`
+    },
+    {
+      correct: false,
+      answer: `3`,
+      response: `While you can construct a sequence of three perspectivities that will take A to a and B to b, you can actually do it in fewer, no matter how the lines and points are situated in space!`
+    },
+    {
+      correct: false,
+      answer: `It may not be possible at all!`,
+      response: `Actually, no matter how the lines and points are situated in space, we can construct a finite sequence of perspectivities that will take A to a, B to b, and C to c.`
+    }
+  ]">
+</mcq>
+
+<p>Now let's make things more interesting, by imagining projectivites from the real line to itself.  We can then think of these projectivities as functions!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/rNlnQJ_eVQg"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[`./images-chapter-3/chapter-3-inversion-puzzle.jpg`]"  question="Where does the projectivity Γ send the point 1?" :choices="[
+    {
+      correct: true,
+      answer: `1/2`,
+      response: `Correct!  If you work out the images of a few more points, maybe you can guess which function we've constructed.`
+    },
+    {
+      correct: false,
+      answer: `1`,
+      response: `Not quite. Remember, first apply the perspectivity centered at O₁ from ℒ to ℓ.  Then apply the perspectivity centered at O₂ from ℓ back to ℒ.`
+    },
+    {
+      correct: false,
+      answer: `2`,
+      response: `Not quite. Remember, first apply the perspectivity centered at O₁ from ℒ to ℓ.  Then apply the perspectivity centered at O₂ from ℓ back to ℒ.`
+    },
+    {
+      correct: false,
+      answer: `∞`,
+      response: `No. You seem to be applying the perspectivities in the reverse order.  Remember, in composition notation, we apply the righthand function first, followed by the lefthand function. So first apply the perspectivity centered at O₁ from ℒ to ℓ.  Then apply the perspectivity centered at O₂ from ℓ back to ℒ.`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-3/chapter-3-parallel-proj.jpg`]"  question="Which function does the projectivity Γ represent?" :choices="[
+    {
+      correct: false,
+      answer: `x ↦ 2x`,
+      response: `No. Try testing out a few more points.`
+    },
+    {
+      correct: false,
+      answer: `x ↦ x/2`,
+      response: `No. Try testing out a few more points.`
+    },
+    {
+      correct: true,
+      answer: `x ↦ x+1`,
+      response: `Yes.  Since the perspectivities are centered at points at infinity, they both project uniformly, in the directions associated to their respective points at infinity.`
+    },
+    {
+      correct: false,
+      answer: `x ↦ x-1`,
+      response: `Not quite. You might be applying the perspectivities in the reverse order! First apply the perspectivity centered at O₁ from ℒ to ℓ.  Then apply the perspectivity centered at O₂ from ℓ back to ℒ.`
+    }
+  ]">
+</mcq>
+
+<p>And now for something special...a little theorem that many important results will rest upon!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/oqsq7J0vX_Q"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 6" palette="past" :images="[]"  question="Let Γ be a projectivity from the real line to itself that fixes points 0, 1, and ∞.  Where does Γ send the point 2?" :choices="[
+    {
+      correct: false,
+      answer: `-2`,
+      response: `Be careful...maybe you can try applying the Three Fixed Points Lemma?`
+    },
+    {
+      correct: false,
+      answer: `-1/2`,
+      response: `Be careful...maybe you can try applying the Three Fixed Points Lemma?`
+    },
+    {
+      correct: false,
+      answer: `1/2`,
+      response: `Be careful...maybe you can try applying the Three Fixed Points Lemma?`
+    },
+    {
+      correct: true,
+      answer: `2`,
+      response: `Yes!  By the Three Fixed Points Lemma, since Γ fixes three distinct points, it fixes all points, including 2.`
+    }
+  ]">
+</mcq>
 
 <div class="nav-container" style="width: 100%;">
  <a href="./lecture-7.html" class="nav-button"><< Lecture 7 </a>

@@ -35,6 +35,207 @@
 </md>
 
 
+<p>Let's start by proving the the one dimensional version of the Fundamental Theorem of Projective Geometry.  We call it <i>one dimensional</i> because it concerns projectivities between lines in in P³.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/NOKad2-hGDk"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-3/chapter-3-two-examples.jpg`]"  question="Suppose F and G are two projectivities from line ℒ to line ℓ which both send point A to point a, point B to point b, and point C to point c.  Then F = G." :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `Correct!  By the Fundamental Theorem of Projective Geometry, F and G must agree everywhere, and hence be identical as functions from ℒ to ℓ.  The image above shows two different sequences of perspectivities that realize the projectivity F = G.`
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Are you sure?  Recall the definintion of projectivity, as well as the Fundamental Theorem of Projective Geometry.`
+    }
+  ]">
+</mcq>
+
+<p>Next we'll prove Pappus's Theorem, for which we'll need a neat little construction.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/2Z7ov9Te8Lo"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-3/chapter-3-criss-cross.jpg`]"  question="Where does Γ send the point M?" :choices="[
+    {
+      correct: false,
+      answer: `B`,
+      response: `No.  Try following M through the two perpectivities that make up Γ.`
+    },
+    {
+      correct: false,
+      answer: `b`,
+      response: `No.  Try following M through the two perpectivities that make up Γ.`
+    },
+    {
+      correct: true,
+      answer: `ℒ ∩ ℓ`,
+      response: `Correct!  M is fixed by the first perspectivity and sent to ℒ ∩ ℓ by the second.`
+    },
+    {
+      correct: false,
+      answer: `Undefined`,
+      response: `Are you sure?  You may be applying the perspectivities in the wrong order!.`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 3" palette="past" :images="[]"  question="Although the three criss cross projectivities agree at A, B, and C, they may disagree at other points." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Are you sure?  Remember the Fundamental Theorem of Projective Geometry!`
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Yes!  By the Fundamental Theorem, the three maps must be identical.`
+    }
+  ]">
+</mcq>
+
+<p>We're now ready to prove Pappus's Theorem!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/mRjAwe0nOj0"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[]"  question="Our proof of Pappus's Theorem relied on the Three Fixed Points Theorem." :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `That's right! We needed the Three Fixed Points Theorem to know the two criss cross constructions yielded identical maps, and that the intermediate lines in both constructions were the same.  In fact it turned out to be the Pappus Line!`
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Actually we did require it, in a fundamental way!  There are alternate proofs of Pappus's Theorem that do not use it, but instead they use other machinery that we have not developed in this class.`
+    }
+  ]">
+</mcq>
+
+<p>Finally, let's prove the two dimensional version of the Fundamental Theorem of Projective Geometry.  We call it <i>two dimensional</i> because it concerns projectivities between planes in P³. </p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/Xs1Nb3lPc98"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-3/homework-3-ftpg.jpg`]"  question=" How can we be sure that the line R*R' meets the line  S*S' ?" :choices="[
+    {
+      correct: true,
+      answer: `Because both the lines R*S* and R'S' contain A', and are hence coplanar.`,
+      response: `Correct! It follows that R*R' and S*S' are coplanar, and hence intersect.`
+    },
+    {
+      correct: false,
+      answer: `Because the quadrilaterals P'Q'S*R* and P'Q'R'S' share an edge.`,
+      response: `Actually that does not guarantee R*R' and S*S' will intersect.  There's something else at work.`
+    },
+    {
+      correct: false,
+      answer: `Because any two lines in P³ intersect.`,
+      response: `Incorrect.  Lines in P³ intersect if and only if they are coplanar.`
+    }
+  ]">
+</mcq>
+
+<p>In order to complete the proof, we'll need a generalization of the Three Fixed Points Theorem...namely, the Four Fixed Points Lemma!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/Fa5qsyeIUbE"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 6" palette="past" :images="[`./images-chapter-3/chapter-3-ftpg-application.png`]"  question="Let π denote the xy plane sitting in P³ and let Γ be a projectivity from π to itself.  Suppose Γ fixes points (0,0), (1,1), (-1, 1) and (-1, -1).  Then Γ must be the identity map on π." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Are you sure?  Are all conditions of the Fundamental Theorem satisfied?`
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Correct!  Three of the points are collinear, so the Fundamental Theorem does not apply.`
+    }
+  ]">
+</mcq>
+
+<p>Great, we've proved some interesting results about projectivities between planes.  But how does this relate to our original question, about the possible shadows of a square?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/GQBuMwCMu7Q"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+
+<mcq-pictorial label="Exercise 7" palette="past" :images="[]" question="Which of the following is not the image of a square under parallel projection (i.e. under a perspectivity centered at a point at infinity)? " :choices="[
+    {
+      correct: false,
+      answer: `Square`,
+      picture: `./images-chapter-3/homework-3-parallel-projection-A.png`, 
+      response: `No. a square can indeed be the image of a square.  Imagine the sun directly overhead.`
+    },
+    {
+      correct: false,
+      answer: `Rectangle`,
+      picture: `./images-chapter-3/homework-3-parallel-projection-B.png`, 
+      response: `No, a rectangle can indeed be the image of a square. Imagine the sun's rays are perpendicular to one set of edges of the square.`
+    },
+    {
+      correct: false,
+      answer: `Parallogram`,
+      picture: `./images-chapter-3/homework-3-parallel-projection-C.png`, 
+      response: `No, a parallelogram can indeed be the image of a square. In fact this will be the case for a square under sunlight, unless the sun's rays are perpendicular to one or more sets of edges of the square.`
+    },
+    {
+      correct: true,
+      answer: `Trapezoid`,
+      picture: `./images-chapter-3/homework-3-parallel-projection-D.png`, 
+      response: `Yes, parallel projection takes parallel lines to parallel lines.  And the left and right edges of the trapezoid are not parallel.`
+    }
+  ]">
+</mcq-pictorial>
+
 
 <div class="nav-container" style="width: 100%;">
  <a href="./lecture-8.html" class="nav-button"><< Lecture 8 </a>

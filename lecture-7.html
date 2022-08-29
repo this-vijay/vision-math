@@ -33,7 +33,192 @@
 ## Lecture 7: A Closer Look at Perspectivities
 </md>
 
+<p>Let's try defining perspectivities more precisely.</p>
 
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/ZsuHWJG_ViQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-3/chapter-3-rational-map.jpg`]" question="Consider non-parallel planes π and π' in R³, and a point O off of both planes.  Let S be the set of points x in π such that Ox does not intersect π'.  What is S?" :choices="[
+    {
+      correct: false,
+      answer: `S is the line of intersection of planes π and π'.`,
+      response: `No. If x is in the intersection of planes π and π', then Ox will intersect π' at x itself!`
+    },
+    {
+      correct: true,
+      answer: `S is the line of intersection of π with the plane parallel to π' through O.`,
+      response: `Yes!  In this case Ox will be parallel to π', and will therefore not intersect π'.`
+    },
+    {
+      correct: false,
+      answer: `S is the empty set.`,
+      response: `No.  Since the planes are in R³, there are indeed points x in π such that Ox does not intersect π'.`
+    },
+    {
+      correct: false,
+      answer: `We need more information about the relative positions of π and π' to determine S.`,
+      response: `No, believe it or not, we have enough information!  Note that the planes  π and π' are not parallel.`
+    }
+  ]">
+</mcq>
+
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-3/chapter-3-rational-map2.jpg`]" question="Suppose π and π' are (extended) planes in P³.  Let ℓ denote the intersection of π with the unique plane through O that is parallel to π'.  Let x be any point in ℓ.  Then the line Ox will intersect π'." :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `Yes!  The line Ox will be parallel to the plane π', and will therefore intersect it at the point at infinity associated to line Ox.`
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Actually, since the planes live in P³, there is a point at infinity that the line and plane will have in common. Can you see which one?`
+    }
+  ]">
+</mcq>
+
+<p>We've defined perspectivities abstractly...but can we imagine some real life examples?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/BdkVmc5pZvE"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+
+
+<mcq-pictorial label="Exercise 3" palette="past" :images="[`./images-chapter-3/chapter-3-pinhole.jpg`]" question="What is the missing portion of the image of the railway tracks under the above perspectivity from plane π to plan π'. " :choices="[
+    {
+      correct: false,
+      answer: `A`,
+      picture: `./images-chapter-3/chapter-3-pinholeA.jpg`, 
+      response: `No. In this region, the horizon line is below the image!  So the railway tracks should converge at the bottom of the square.`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-3/chapter-3-pinholeB.jpg`, 
+      response: `No. In this region, the horizon line is below the image!  So the railway tracks should converge at the bottom of the square.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-3/chapter-3-pinholeC.jpg`, 
+      response: `Not quite.  Remember, in this region, the perspectivity is orientation reversing.  How would that affect the location of the brown line?`
+    },
+    {
+      correct: true,
+      answer: `D`,
+      picture: `./images-chapter-3/chapter-3-pinholeD.jpg`, 
+      response: `Yes!  The brown line will appear on the opposite side of the railway tracks, since in this region the perspectivity is orientation reversing.`
+    }
+  ]">
+</mcq-pictorial>
+
+<p>Wait a second, does our definition fully make sense?  Are perspectivities well defined on all points of an extended plane, including its points at infinity?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/hEP1WRQ4dzQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[]" question="Let ℓ be an ordinary line in P³ (i.e. not a line at infinity).  Then ℓ intersects the plane at infinity at exactly one point." :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `Yes!  The plane at infinity is simply the set of all points at infinity, including the unique point at infinity associated to ℓ. `
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Actually, they do intersect.  Remember, ℓ is in P³, not R³.`
+    }
+  ]">
+</mcq>
+
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-3/chapter-three-destination.jpg`]" question=" Let π and π' be planes in P³.  
+The perspectivity centered at O from π to π' sends the line 𝓀 to " :choices="[
+    {
+      correct: false,
+      answer: `the line at infinity associated to plane π.`,
+      response: `No, the perspectivity should send 𝓀 to a subset of the image plane π'.`
+    },
+    {
+      correct: true,
+      answer: `the line at infinity associated to plane π'.`,
+      response: `Yes!  Any line connecting O to a point in 𝓀 will be parallel to π'.`
+    },
+    {
+      correct: false,
+      answer: `the line 𝒽.`,
+      response: `Imagine lines connecting O to points in 𝓀.  Would these lines hit 𝒽? `
+    },
+    {
+      correct: false,
+      answer: `the line 𝓀 itself.`,
+      response: `No, the perspectivity should send 𝓀 to a subset of the image plane π', which doesn't contain 𝓀.`
+    }
+  ]">
+</mcq>
+
+<p>Let's use this notion of a perspectivity to take care of some unfinished business.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/8YXi83GtGrE"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<mcq-pictorial label="Exercise 6" palette="past" :images="[`./images-chapter-3/chapter-3-harmonic-proof.png`]" question="Which of the following best represents the image of the square PQRS under the perspectivity centered at O from π to π'?" :choices="[
+    {
+      correct: true,
+      answer: `A`,
+      picture: `./images-chapter-3/chapter-3-harmonicA.png`, 
+      response: `Yes!  P and S will appear reversed (but R and Q will not!).`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-3/chapter-3-harmonicB.png`, 
+      response: `No. Notice the square lies on the line which maps to the line at infinity in π'.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-3/chapter-3-harmonicC.png`, 
+      response: `Nope. Notice the square lies on the line which maps to the line at infinity in π'.`
+    },
+    {
+      correct: false,
+      answer: `D`,
+      picture: `./images-chapter-3/chapter-3-harmonicD.png`, 
+      response: `Close, but not quite. Don't forget the orientation reversing nature of the map.`
+    }
+  ]">
+</mcq-pictorial>
 
 <div class="nav-container" style="width: 100%;">
  <a href="./chapter-3.html" class="nav-button"><< Chapter Three Intro </a>

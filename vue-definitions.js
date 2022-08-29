@@ -119,7 +119,7 @@ Vue.component('mcq', {
   template: `
   <div :class="['exercise-box', palette]">
     <h4>{{label}}</h4>
-        <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="50%"/>
+        <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="60%"/>
     <h5>{{question}}</h5>
     <br>
     <p v-for="(choice, index) in choices" :class="(choice.correct && selected == index) ? 'bold' : ''"><input type="radio" v-model="selected" :value="index">{{choice.answer}}</p>
@@ -147,7 +147,7 @@ Vue.component('mcq-pictorial', {
   template: `
   <div :class="['exercise-box', palette]">
     <h4>{{label}}</h4>
-    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="50%"/>
+    <img v-for="image in images" :src="image" :class="['exercise-image', 'shrinkToFit']" width="70%"/>
     <h5>{{question}}</h5>
     <br>
 
