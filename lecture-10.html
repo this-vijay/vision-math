@@ -34,9 +34,272 @@
 
 </md>
 
+<p>Let's start by defining the cross ratio more precisely.</p>
 
-<p>COMING SOON!</p>
-<p>MATERIAL WILL BE POSTED BY FRIDAY, SEPTEMBER 9TH, 2022</p>
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/4aKALGdisfQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-4/CH4-L10-EX1.jpg`]"  question="What is the signed length of segment DC?" :choices="[
+    {
+      correct: false,
+      answer: `-∞`,
+      response: `No.  The signed length between two points on the real number line refers to the signed length of the finite segment between them -- not the segment containing the point at infinity.`
+    },
+    {
+      correct: true,
+      answer: `-9`,
+      response: `Yes!  Since C is to the left of D, the signed length of DC is negative.`
+    },
+    {
+      correct: false,
+      answer: `9`,
+      response: `No, that would be the signed length of segment CD.  If the points are ordered from right to left, as with DC, then the signed length will be negative.`
+    },
+    {
+      correct: false,
+      answer: `∞`,
+      response: `No.  The signed length between two points on the real number line refers to the signed length of the finite segment between them -- not the segment containing the point at infinity.`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-4/CH4-L10-EX2.jpg`]"  question="Suppose points A, B, C, and D are related to points A’, B’, C’, and D’ by a perspectivity.  The 'invariance of the cross ratio' implies that AB/BC :  AD/DC = A’B’/B’C’ : A’D’/D’C’" :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `Yes!  The 'invariance' of the cross ratio is precisely this fact: the cross ratio of four points does not 'vary' when we transform those points via a perspectivity.`
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Actually it is true -- by 'invariance' we mean we can 'vary' or change those four points using perspectivities, without altering the numerical value of the cross ratio.`
+    }
+  ]">
+</mcq>
+
+<p>Are there any other sets of collinear points for which we might want to check the cross ratio?  How about four evenly spaced points?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/EX230ODlGNQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 3" palette="past" :images="[`./images-chapter-4/CH4-L10-EX3.png`]"  question="Determine the cross ratio (A,C; B,D)." :choices="[
+    {
+      correct: false,
+      answer: `-1`,
+      response: `No.  Sadly, the cross ratio of evenly spaced tiles is not such a nice number.  But perhaps you can use the fact the tiles are evenly spaced to avoid messy computations!`
+    },
+    {
+      correct: true,
+      answer: `-1/3`,
+      response: `Yes!  You can get this value by direct computation, or by remembering that the cross ratio of any four evenly spaced points will always be -1/3.`
+    },
+    {
+      correct: false,
+      answer: `1/3`,
+      response: `Close, but not quite.  Double check the cross ratio of evenly spaced points...or if you computed this value directly, make sure you used the *signed* length DC.`
+    },
+    {
+      correct: false,
+      answer: `1`,
+      response: `No.  Sadly, the cross ratio of evenly spaced tiles is not such a nice number.  But perhaps you can use the fact the tiles are evenly spaced to avoid messy computations!`
+    }
+  ]">
+</mcq>
+
+<p>In case you've encountered the cross ratio elsewhere, you might have seen it defined differently.   This is because there's actually several different formulations of the cross ratio, all equally valid!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/uDTCuw4prX0"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[`./images-chapter-4/CH4-L10-EX4.jpg`]"  question="Suppose (A,C;B,D) = λ for some points A, B, C, and D.  Note that (A,C;D,B) = 1/λ, and (A,B;C,D) = 1–λ.  Which of the following has value 1/(1–λ)?" :choices="[
+    {
+      correct: false,
+      answer: `(A,C;B,D)`,
+      response: `No.  That's just our standard cross ratio, which has value λ.`
+    },
+    {
+      correct: false,
+      answer: `(A,B;C,D)`,
+      response: `Nope.  Here we're swapping the second and third entries of (A,C;B,D), which amounts to taking the 1 minus the value, resulting in 1-λ.`
+    },
+    {
+      correct: false,
+      answer: `(A,C;D,B)`,
+      response: `Not quite.  Here we're swapping the third and fourth entries of (A,C;B,D), which amounts to taking the reciprocal, resulting in 1/λ.`
+    },
+
+    {
+      correct: true,
+      answer: `(A,B;D,C)`,
+      response: `Yes!  Starting with λ=(A,C;B,D), we first swap the second and third entries to get (A,B;C,D) = 1-λ.  Then, we swap the third and fourth entries to get (A,B;D,C)=1/(1-λ).`
+    }
+  ]">
+</mcq>
+
+<p>Let's prove the invariance of the cross ratio -- and finally answer the question of what stays the same under a perspective shift!</p>
+
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/AfDL2njUESs"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-4/CH4-L10-EX5.png`]"  question="Determine the cross ratio (A',C';B',D')." :choices="[
+    {
+      correct: true,
+      answer: `-1/3`,
+      response: `Yes!  By the Invariance of the Cross Ratio, we know (A',C';B',D') = (A,C;B,D).  And since A, B, C, and D are evenly spaced, their cross ratio is -1/3.`
+    },
+    {
+      correct: false,
+      answer: `-1`,
+      response: `No...try applying the Invariance of the Cross Ratio Theorem, in order to relate (A',C';B',D') and (A,C;B,D).`
+    },
+    {
+      correct: false,
+      answer: `3`,
+      response: `Nope...try applying the Invariance of the Cross Ratio Theorem, in order to relate (A',C';B',D') and (A,C;B,D).`
+    },
+
+    {
+      correct: false,
+      answer: `Not enough information to say.`,
+      response: `Actually, there is enough info!  And you don't need to take any measurements.  Instead, try to apply the Invariance of the Cross Ratio Theorem.`
+    }
+  ]">
+</mcq>
+
+<p>In addition to its invariance under perspective shifts, the cross ratio displays another very important property.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/5B_KnHuTF38"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<mcq label="Exercise 6" palette="past" :images="[]"  question="Suppose the cross ratio (X, 2; 1, 3) = -1/3 for some real number X.  Determine the value of X." :choices="[
+    {
+      correct: true,
+      answer: `0`,
+      response: `Yes! By the Injectivity Theorem, there is only one value of X that will give a cross ratio of -1/3.  And we know that (0,2;1,3)=-1/3, since the points A=0, B=1, C=2, and D=3 are evenly spaced.`
+    },
+    {
+      correct: false,
+      answer: `1`,
+      response: `No. It may be helpful to picture the points A=X, B=1, C=2, and D=3 on the number line.`
+    },
+    {
+      correct: false,
+      answer: `2`,
+      response: `Nope. It may be helpful to picture the points A=X, B=1, C=2, and D=3 on the number line.`
+    },
+
+    {
+      correct: false,
+      answer: `3.`,
+      response: `Incorrect. It may be helpful to picture the points A=X, B=1, C=2, and D=3 on the number line.`
+    }
+  ]">
+</mcq>
+
+<p>Putting together the invariance and injectivity of the cross ratio, we can finally prove the Three Fixed Points Theorem, which has been at the heart of all our major results!</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/2e1BCppOiUM"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 7" palette="past" :images="[`./images-chapter-4/CH4-L10-EX7.png`]"  question="There exists a perspective view from which these points will appear evenly spaced." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Are you certain?  Notice that the cross ratio (A,C;B,D) is equal to (3/2)/(-1/6) = -1/4.  `
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Correct!  The cross ratio (A,C;B,D) = -1/4.  By the Fundamental Theorem, you can map A, B, and C to any three evenly spaced points on the real number line, say 0, 1, and 2.  But then D cannot map to the point 3, since that would give a cross ratio of -1/3.   Therefore these points cannot possibly appear evenly spaced from any perspective view!`
+    }
+  ]">
+</mcq>
+
+<p>As we saw while proving the injectivity theorem, it's often natural to fix three points and think of the cross ratio as a function on the fourth.  Let's finish our introduction to the cross ratio by taking a closer look at that function.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/RGSnQmSjzfQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+
+<mcq-pictorial label="Exercise 8" palette="past" :images="[]" question="Let B, C, and D be real numbers.  Which linear fractional function sends B to 0, C to 1, D to infinity? " :choices="[
+    {
+      correct: true,
+      answer: `A`,
+      picture: `./images-chapter-4/CH4-L10-EX8-A.png`, 
+      response: `Yes! Plugging in B for X makes the numerator zero, plugging in D for X makes the denominator zero, and plugging in C for X makes the numerator and denominator cancel out.`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-4/CH4-L10-EX8-B.png`, 
+      response: `Not quite. You may have mixed up B and D. Plugging in B for X gives infinity, not zero.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-4/CH4-L10-EX8-C.png`, 
+      response: `No. Try plugging in B, C, and D for X, and see what you get in each case.`
+    },
+    {
+      correct: false,
+      answer: `D`,
+      picture: `./images-chapter-4/CH4-L10-EX8-D.png`, 
+      response: `Not quite. Try plugging C for X, and see what you get.  How can you ensure a value of 1?`
+    }
+  ]">
+</mcq-pictorial>
 
 <div class="nav-container" style="width: 100%;">
  <a href="./chapter-4.html" class="nav-button"><< Chapter Four Intro </a>

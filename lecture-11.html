@@ -34,8 +34,178 @@
 
 </md>
 
-<p>COMING SOON!</p>
-<p>MATERIAL WILL BE POSTED BY FRIDAY, SEPTEMBER 9TH, 2022</p>
+<p>The analytic approach relies on a powerful new model of our geometry of points and lines.  It is known as RP², the <i>real projective plane</i>.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/LYNYqKfmVVI"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-4/CH4-L11-EX1.jpg`]"  question="The x-axis in R³ is an example of a projective point in RP²." :choices="[
+    {
+      correct: true,
+      answer: `True`,
+      response: `Yes!  The x-axis is indeed a line through the origin, and hence represents a projective point.`
+    },
+    {
+      correct: false,
+      answer: `False`,
+      response: `Remember, a projective point is defined to be a line through the origin.  Isn't the x-axis a perfectly good example of that?`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-4/CH4-L11-EX2.jpg`]"  question="The plane z=3 in R³ is an example of a projective line in RP²." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Are you sure?  Remember, projective lines are defined to be planes *through the origin* in R³.`
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Correct.  The plane z=3 does not go through the origin, so it does not represent a projective line.`
+    }
+  ]">
+</mcq>
+
+<p>We need a convenient notation for referring to the points of RP² -- in other words, a way to refer to lines through the origin in R³.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/8wC7Q0ro7rE"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 3" palette="past" :images="[`./images-chapter-4/CH4-L11-EX3.jpg`]"  question="Which of the following homogeneous coordinates does *not* refer to the line ℓ?" :choices="[
+    {
+      correct: false,
+      answer: `[v₁ : v₂ : v₃]`,
+      response: `Actually, [v₁ : v₂ : v₃] does refer to line ℓ. It is literally the set of all scalar multiples of the vector (v₁ , v₂ , v₃), including (v₁ , v₂ , v₃) itself.`
+    },
+    {
+      correct: false,
+      answer: `[-v₁ : -v₂ : -v₃]`,
+      response: `Actually, the vector (-v₁ , -v₂ , -v₃) is a scalar multiple of (v₁ , v₂ , v₃), so [-v₁ : -v₂ : -v₃] = [v₁ : v₂ : v₃].`
+    },
+    {
+      correct: false,
+      answer: `[2v₁ : 2v₂ : 2v₃]`,
+      response: `Actually, the vector (2v₁ , 2v₂ , 2v₃) is a scalar multiple of (v₁ , v₂ , v₃), so [2v₁ : 2v₂ : 2v₃] = [v₁ : v₂ : v₃].`
+    },
+    {
+      correct: true,
+      answer: `[v₁ : 2v₂ : 3v₃]`,
+      response: `Yes. The vector (v₁ , 2v₂ , 3v₃) is not a scalar multiple of (v₁ , v₂ , v₃), so [v₁ : 2v₂ : 3v₃] ≠ [v₁ : v₂ : v₃].`
+    }
+  ]">
+</mcq>
+
+<p>Let's apply homogeneous coordinates to give a simple proof of the Vanishing Point Theorem from Chapter One.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/KV-MXYkx4Cc"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[]"  question="Let Pₜ denote the projective point [2 : -1 : t]. Which projective point does Pₜ approach as t goes to infinity?" :choices="[
+    {
+      correct: false,
+      answer: `[2 : -1 : 0]`,
+      response: `No.  Perhaps you can try rewriting [2 : -1 : t] in a way that makes it easier to take the limit?`
+    },
+    {
+      correct: false,
+      answer: `[1 : 1 : 0]`,
+      response: `Nope.  Perhaps you can try rewriting [2 : -1 : t] in a way that makes it easier to take the limit?`
+    },
+    {
+      correct: true,
+      answer: `[0 : 0 : 1]`,
+      response: `Correct.  You can rewrite [2 : -1 : t] as [2/t : -1/t : 1] by dividing through by t.  Letting t go to infinity, we get [0 : 0 : 1].`
+    },
+    {
+      correct: false,
+      answer: `[1 : 1 : 1]`,
+      response: `Incorrect.  Perhaps you can try rewriting [2 : -1 : t] in a way that makes it easier to take the limit?`
+    }
+  ]">
+</mcq>
+
+<p>Homogeneous coordinates also give a neat way to compute the projective line determined by two projective points. And also the projective point determined by two projective lines.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/Y9MPRp9oGKA"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<mcq label="Exercise 5" palette="past" :images="[`./images-chapter-4/CH4-L11-EX5.jpg`]"  question="Consider the x-axis and the z-axis as projective points.  Which homogeneous coordinate represents the projective line we get by taking their join?" :choices="[
+    {
+      correct: false,
+      answer: `[1 : 0 : 1]`,
+      response: `No.  Remember, the join of two projective points is the unique projective line that contains them.  In other words, it is the unique plane through the origin containing the two lines through the origin.  And it is represented by the homoogeneous coordinate of any normal vector to that plane.`
+    },
+    {
+      correct: true,
+      answer: `[0 : 1 : 0]`,
+      response: `Yes.  The xz-plane is the unique plane through the origin containing both the x-axis and z-axis, so it represents their join.  It corresponds to the homogeneous coordinate [0 : 1 : 0], since it has normal vector (0,1,0). `
+    },
+    {
+      correct: false,
+      answer: `[1 : 1 : 1]`,
+      response: `No.  Remember, the join of two projective points is the unique projective line that contains them.  In other words, it is the unique plane through the origin containing the two lines through the origin.  And it is represented by the homoogeneous coordinate of any normal vector to that plane.`
+    },
+    {
+      correct: false,
+      answer: `[1 : 2 : 1]`,
+      response: `No.  Remember, the join of two projective points is the unique projective line that contains them.  In other words, it is the unique plane through the origin containing the two lines through the origin.  And it is represented by the homoogeneous coordinate of any normal vector to that plane.`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 6" palette="past" :images="[`./images-chapter-4/CH4-L11-EX6.jpg`]"  question="Consider the xy-plane and the yz-plane as projective lines.  Which homogeneous coordinate represents the projective point we get by taking their meet?" :choices="[
+    {
+      correct: false,
+      answer: `[1 : 0 : 1]`,
+      response: `No.  Remember, the meet of two projective lines is the unique projective point contained in both.  In other words, it is the line through the origin we get by intersecting the two planes.`
+    },
+    {
+      correct: true,
+      answer: `[0 : 1 : 0]`,
+      response: `Yes.  The y-axis is the unique line through the origin contained in both the xy-plane and the yz-plane, so it represents their meet.  It corresponds to the homogeneous coordinate [0 : 1 : 0].`
+    },
+    {
+      correct: false,
+      answer: `[1 : 1 : 1]`,
+      response: `No.  Remember, the meet of two projective lines is the unique projective point contained in both.  In other words, it is the line through the origin we get by intersecting the two planes.`
+    },
+    {
+      correct: false,
+      answer: `[1 : 2 : 1]`,
+      response: `No.  Remember, the meet of two projective lines is the unique projective point contained in both.  In other words, it is the line through the origin we get by intersecting the two planes.`
+    }
+  ]">
+</mcq>
 
 <div class="nav-container" style="width: 100%;">
  <a href="./lecture-10.html" class="nav-button"><< Lecture 10 </a>

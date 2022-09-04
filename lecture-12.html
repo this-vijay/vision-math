@@ -34,8 +34,210 @@
 
 </md>
 
-<p>COMING SOON!</p>
-<p>MATERIAL WILL BE POSTED BY FRIDAY, SEPTEMBER 9TH, 2022</p>
+<p>Before we try to understand transformations of RP², we need a better way to visualize the points and lines in RP².</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/ngDlijaBj3Y"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 1" palette="past" :images="[`./images-chapter-4/CH4-L12-EX1.jpg`]"  question="Let P = [0 : 1 : 1] and Q = [1 : 0 : 1].  Use the affine chart z=1 to determine which of the following projective points is not collinear with P and Q." :choices="[
+    {
+      correct: false,
+      answer: `[-2 : 4 : 2]`,
+      response: `No. This projective point is represented by the point (-1, 2) on the affine plane z=1, which is indeed on the line x+y=1 connecting (0,1) and (1,0).`
+    },
+    {
+      correct: false,
+      answer: `[1 : 1 : 2]`,
+      response: `No. This projective point is represented by the point (1/2, 1/2) on the affine plane z=1, which is indded on the line x+y=1 connecting (0,1) and (1,0).`
+    },
+    {
+      correct: false,
+      answer: `[-2 : 1 : -1]`,
+      response: `No. This projective point is represented by the point (2, -1) on the affine plane z=1, which is indeed on the line x+y=1 connecting (0,1) and (1,0).`
+    },
+    {
+      correct: true,
+      answer: `[-2 : -2 : -2]`,
+      response: `Yes! This projective point is represented by the point (1, 1) on the affine plane z=1, which is NOT on the line x+y=1 connecting (0,1) and (1,0).`
+    }
+  ]">
+</mcq>
+
+<p>We've gotten quite familiar with projectivities, the transformations of the extended Euclidean plane. What would the analogous transformations of RP² look like?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/xLuBUcVJdLM"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 2" palette="past" :images="[`./images-chapter-4/CH4-L12-EX2.jpg`]"  question="Which of the following projective points is fixed under the action of the matrix A?" :choices="[
+    {
+      correct: false,
+      answer: `[1 : 1 : 1]`,
+      response: `No. Under left multiplation, the column vector (1,1,1)ᵀ is sent to (-1,-1,1)ᵀ, which is not a scalar multiple.`
+    },
+    {
+      correct: true,
+      answer: `[0 : 0 : 1]`,
+      response: `Yes.  Under left multiplation, the column vector (0,0,1)ᵀ is sent to (0,0,1)ᵀ.`
+    },
+    {
+      correct: true,
+      answer: `[1 : 1 : 0]`,
+      response: `Yes. Under left multiplation, the column vector (1,1,0)ᵀ is sent to (-1,-1,0)ᵀ, which is a scalar multiple.`
+    },
+    {
+      correct: false,
+      answer: `[1 : 2 : 3]`,
+      response: `No. Under left multiplation, the column vector (1,2,3)ᵀ is sent to (-1,-2,3)ᵀ, which is not a scalar multiple.`
+    }
+  ]">
+</mcq>
+
+<mcq label="Exercise 3" palette="past" :images="[`./images-chapter-4/CH4-L12-EX3.jpg`]"  question="The set of fixed points in RP² under the action of matrix B consists of" :choices="[
+    {
+      correct: false,
+      answer: `one projective point.`,
+      response: `Nope - consider the action of left multiplication by matrix B on column vectors.  Which vectors are taken to scalar multiples of themselves?`
+    },
+    {
+      correct: false,
+      answer: `two projective points.`,
+      response: `No - consider the action of left multiplication by matrix B on column vectors.  Which vectors are taken to scalar multiples of themselves?`
+    },
+    {
+      correct: false,
+      answer: `a projective line.`,
+      response: `Not quite - can you find examples of column vectors that are not taken to scalar multiples of themselves under left multiplication by B?`
+    },
+    {
+      correct: true,
+      answer: `all of RP².`,
+      response: `Yes! Under left multiplication by matrix B, any column vector is taken to a scalar multiple of itself.`
+    }
+  ]">
+</mcq>
+
+<p>The projective linear group PGL(3,R) consists of transformations of RP². Can we somehow characterize these transformations?</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/8sHjFuRn-eo"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+<mcq label="Exercise 4" palette="past" :images="[`./images-chapter-4/CH4-L12-EX4.jpg`]"  question="There exists a unique 3x3 invertible matrix taking projective points P,Q,R,S to projective points P’,Q’,R’S’." :choices="[
+    {
+      correct: false,
+      answer: `True`,
+      response: `Are you sure?  If a matrix A takes P,Q,R,S to P',Q',R',S', then won't the matrix 2A do the same?`
+    },
+    {
+      correct: true,
+      answer: `False`,
+      response: `Correct!  There's actually a whole family of matrices (related to one another by scalar multiplation) taking P,Q,R,S to P',Q',R',S'.`
+    }
+  ]">
+</mcq>
+
+<p>Okay, so the projective linear group PGL(3,R) is really an analytic formulation of the set of projectivities.  Let's try visualizing the action of PGL(3,R) on the affine plane z=1, and in the process gain more clarity about the types of projectivities that exist.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/mrHuJIjZM38"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
+<mcq-pictorial label="Exercise 5" palette="past" :images="[`./images-chapter-4/CH4-L12-EX5.jpg`]" question="How is the square transformed by the above element of PGL(3,R)?" :choices="[
+    {
+      correct: true,
+      answer: `A`,
+      picture: `./images-chapter-4/CH4-L12-EX5-A.png`, 
+      response: `Yes. The matrix performs a translation of the plane z=1.`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-4/CH4-L12-EX5-B.png`, 
+      response: `No, the matrix does not perform a rotation of the plane z=1.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-4/CH4-L12-EX5-C.png`, 
+      response: `No, the matrix does not perform a shear transformation on the plane z=1.`
+    },
+    {
+      correct: false,
+      answer: `D`,
+      picture: `./images-chapter-4/CH4-L12-EX5-D.png`, 
+      response: `No, the matrix does not perform a perspective distortion on the plane z=1.`
+    }
+  ]">
+</mcq-pictorial>
+
+<mcq-pictorial label="Exercise 6" palette="past" :images="[`./images-chapter-4/CH4-L12-EX6.jpg`]" question="How is the square transformed by the above element of PGL(3,R)?" :choices="[
+    {
+      correct: false,
+      answer: `A`,
+      picture: `./images-chapter-4/CH4-L12-EX5-A.png`, 
+      response: `No, the matrix does not perform a translation of the plane z=1.`
+    },
+    {
+      correct: false,
+      answer: `B`,
+      picture: `./images-chapter-4/CH4-L12-EX5-B.png`, 
+      response: `No, the matrix does not perform a rotation of the plane z=1.`
+    },
+    {
+      correct: false,
+      answer: `C`,
+      picture: `./images-chapter-4/CH4-L12-EX5-C.png`, 
+      response: `No, the matrix does not perform a shear transformation on the plane z=1.`
+    },
+    {
+      correct: true,
+      answer: `D`,
+      picture: `./images-chapter-4/CH4-L12-EX5-D.png`, 
+      response: `Yes. The matrix performs a perspective distortion on the plane z=1.`
+    }
+  ]">
+</mcq-pictorial>
+
+<p>The Fundamental Theorem of PGL(3,R) remains to be proven.  For this we'll need some linear algebra.</p>
+
+<div class="video-container">
+  <iframe
+      src="https://www.youtube.com/embed/DQNHRdI3giQ"
+      width="700"
+      height="480"
+      frameborder="0"
+      allowfullscreen="">
+  </iframe>
+</div>
+
+
 
 <div class="nav-container" style="width: 100%;">
  <a href="./lecture-11.html" class="nav-button"><< Lecture 11 </a>
